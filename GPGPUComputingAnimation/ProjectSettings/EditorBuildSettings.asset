@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scene/Enter.unity
+    guid: 292a88fe3c9bdcb4faaa8eb367af2566
+  - enabled: 1
+    path: Assets/Scene/Animation.unity
+    guid: 63fff8ed10ea4174a8a206577238b22b
+  - enabled: 1
+    path: Assets/Scene/CSTest.unity
+    guid: 37dab9b477304f04599641af0731449c
+  - enabled: 1
+    path: Assets/Scene/VFTest.unity
+    guid: 6795ddd0a80b2164f88d06ccfdb814fc
+  - enabled: 1
+    path: Assets/Scene/VertexAnim.unity
+    guid: 6c33b55aded307b4ba3ef23591d68054
+  m_configObjects: {}
