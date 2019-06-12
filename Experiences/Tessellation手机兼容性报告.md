@@ -42,6 +42,6 @@ https://developer.apple.com/library/archive/releasenotes/General/WhatsNewIniOS/A
 
 
 ## 总结
-1.<font size=4 color="#660000">```Tessellation技术在Android上运行要求：Shader Model 5.0的设备（OpenGL ES 3.1及以上设备大部分满足此条件，少数3.1的设备不满足）```</font>
+1.**Tessellation技术在Android上运行要求：Shader Model 5.0的设备（OpenGL ES 3.1及以上设备大部分满足此条件，少数3.1的设备不满足）**。
 
-2.<font size=4 color="#660000">```Tessellation技术在iOS上运行要求：硬件最低为iPhone 6s (A9)，系统软件最低为iOS 10```</font>
+2.**Tessellation技术在iOS上运行要求：硬件最低为iPhone 6s (A9)，系统软件最低为iOS 10**。
