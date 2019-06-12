@@ -63,7 +63,7 @@
     CombinedShaderStorageBlocks：35
 &emsp;&emsp;在HUAWEI Mate 9上，片元着色器验证通过，的确能最多访问35个StructuredBuffer。但Compute Shader验证发现有问题，虽然数据上返回的是35个，但实验发现最多只能访问24个。（Fragment中使用还是35个）
 
-&emsp;&emsp;另外使用WeTest测试222台手机，[点击查看测试数据](https://github.com/Nicholas10128/AAAResearch/blob/master/Experiences/StructuredBuffer%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/Structured%20Buffer%E5%9C%A8WeTest-Android%E5%90%84%E6%9C%BA%E5%9E%8B%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5.md)
+&emsp;&emsp;另外使用WeTest测试222台手机，[点击查看测试数据](https://github.com/Nicholas10128/AAAResearch/blob/master/Experiences/StructuredBuffer%E6%B5%8B%E8%AF%95%E6%8A%A5%E5%91%8A/Image/Structured%20Buffer%E5%9C%A8WeTest-Android%E5%90%84%E6%9C%BA%E5%9E%8B%E6%94%AF%E6%8C%81%E6%83%85%E5%86%B5.md)
 
 #### iOS测试
 
