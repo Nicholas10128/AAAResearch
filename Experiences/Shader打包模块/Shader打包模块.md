@@ -27,7 +27,7 @@
 		- [Shader编写规范](#shader编写规范)
 			- [1.建议使用shader_feature时将定义语句写成完整模式，并且不要在一个语句中定义多个宏。](#1建议使用shaderfeature时将定义语句写成完整模式并且不要在一个语句中定义多个宏)
 			- [2.若在shader中使用shader_feature，请为这个shader指定一个CustomEditor](#2若在shader中使用shaderfeature请为这个shader指定一个customeditor)
-	- [其他减少项目中变体数量的方案](#其他减少项目中变体数量的方案)
+	- [其他减少变体数量的方案&注意事项](#其他减少变体数量的方案注意事项)
 
 <!-- /TOC -->
 ## 基础知识
@@ -121,7 +121,7 @@
 ![Plugins](Image/3.png)
 <br/><font size=2>图3</font></br>
 
-&emsp;&emsp;配置好需要生成的变体后，将collection与shader打在同一个包中，便能准确生成面板中所配置的shader变体。
+&emsp;&emsp;配置好需要生成的变体后，<font size=4>```将collection与shader打在同一个包中，便能准确生成面板中所配置的shader变体```</font>。
 ### ShaderVariantCollection生成通过shader_feature定义的变体规则
 &emsp;&emsp;除了在collection中配置的变体会被生成外，Unity还在后台为我们多生成了几个变体，这几个变体是“隐藏的”，并未在collection面板中显示。
 #### 1.	必定生成首个宏定义开启所对应的变体。
@@ -218,14 +218,14 @@ Shader 中有 ForwardBase、ForwardAdd、Normal 三种PassType(以下为了方�
 <br/><font size=2>图6</font></br>
 <br/>
 
-## 其他减少项目中变体数量的方案
+## 其他减少变体数量的方案&注意事项
 
-1.<font size=4>```在使用ShaderVariantCollection收集变体打包时，只对shader_feature定义的宏有意义，multi_compile的变体不用收集也会被全部打进包体```</font>。
+1.<font size=4>```内存中ShaderLab的大小和变体成正比关系。从减少内存方面应该尽量减少变体数量，可以使用 #pragma skip_variants```</font>。
 
-2.<font size=4>```内存中ShaderLab的大小和变体成正比关系。从减少内存方面应该尽量减少变体数量，可以使用 #pragma skip_variants```</font>。
+2.<font size=4>```在使用ShaderVariantCollection收集变体打包时，只对shader_feature定义的宏有意义，multi_compile的变体不用收集也会被全部打进包体```</font>。
 
-3.<font size=4>```ShaderLab在相关shader加入内存时就已经产生，但如果没有被渲染的话不会触发CreateGPUProgram操作，如果提前在ShaderVariantCollection中收集了相关变体并执行了warmup的话，第一次渲染时就不会再CreateGPUProgram，对卡顿会有一定好处```</font>。
+3.<font size=4>```2018.2新功能OnProcessShader可以移除无用的shader变体。比#pragma skip_variants更合理```</font>。
 
-4.<font size=4>```2018.2新功能OnProcessShader可以移除无用的shader变体。比#pragma skip_variants更合理```</font>。
+4.<font size=4>```项目前期介入美术效果制作流程，规范shader宏定义使用，防止TA为了美术效果过度使用宏定义的情况，以过往项目经验来看，到后期进行此项工作导致的资源浪费非常之大```</font>。
 
-5.<font size=4>```项目前期介入美术效果制作流程，规范shader宏定义使用，防止TA为了美术效果过度使用宏定义的情况，以过往项目经验来看，到后期进行此项工作导致的资源浪费非常之大```</font>。
+5.<font size=4>```ShaderLab在相关shader加入内存时就已经产生，但如果没有被渲染的话不会触发CreateGPUProgram操作，如果提前在ShaderVariantCollection中收集了相关变体并执行了warmup的话，第一次渲染时就不会再CreateGPUProgram，对卡顿会有一定好处```</font>。
