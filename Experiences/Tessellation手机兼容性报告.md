@@ -40,7 +40,8 @@ https://developer.apple.com/library/archive/releasenotes/General/WhatsNewIniOS/A
 &emsp;&emsp;经测试，雪地demo在iPhone 6（iOS 10，显存256M）上不能运行；在iPhone 6s（iOS 10，显存512M）上可以运行。iPhone 6s在发售时默认系统为iOS 9。
 因此，<font size=4>```Tessellation技术在iOS上运行要求：硬件最低为iPhone 6s (A9)，系统软件最低为iOS 10```</font>。
 
-## 总结
-1.<font size=4>```Tessellation技术在Android上运行要求：Shader Model 5.0的设备（OpenGL ES 3.1及以上设备大部分满足此条件，少数3.1的设备不满足）```</font>
 
-2.<font size=4>```Tessellation技术在iOS上运行要求：硬件最低为iPhone 6s (A9)，系统软件最低为iOS 10```</font>
+## 总结
+1.<font size=4 color="#660000">```Tessellation技术在Android上运行要求：Shader Model 5.0的设备（OpenGL ES 3.1及以上设备大部分满足此条件，少数3.1的设备不满足）```</font>
+
+2.<font size=4 color="#660000">```Tessellation技术在iOS上运行要求：硬件最低为iPhone 6s (A9)，系统软件最低为iOS 10```</font>
