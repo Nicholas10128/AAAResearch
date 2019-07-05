@@ -10,10 +10,10 @@ GPU Insancing是Unity 5.4加入的新功能，使用GPU Instancing可以批渲�
 利用WeTest测试252台手机是否支持GPU Instancing。具体测试信息如下：
 
     OpenGL ES 3.2	ShaderModel 5.0	 125台	  支持
-    OpenGL ES 3.1	ShaderModel 5.0	 59台	   支持
-    OpenGL ES 3.1	ShaderModel 4.5	 18台	   支持
-    OpenGL ES 3.0	ShaderModel 3.5	 44台	   4台支持，40台不支持
-    OpenGL ES 2.0	ShaderModel 3.0	 6台		不支持
+    OpenGL ES 3.1	ShaderModel 5.0	 59台	  支持
+    OpenGL ES 3.1	ShaderModel 4.5	 18台	  支持
+    OpenGL ES 3.0	ShaderModel 3.5	 44台	  4台支持，40台不支持
+    OpenGL ES 2.0	ShaderModel 3.0	 6台	  不支持
 
 根据Unity官方文档，OpenGL ES 3.0+开始支持GPU Instancing，来源如下：https://docs.unity3d.com/Manual/GPUInstancing.html
 
